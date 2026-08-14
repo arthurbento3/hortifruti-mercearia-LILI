@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
   }
   
   body {
@@ -39,7 +39,7 @@
   }
   
   .brand-logo {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
   
   .logo-icon {
@@ -124,7 +124,7 @@
     color: #333;
     padding: 8px;
     border-radius: 50%;
-    transition: background 0.2s;
+    transition: 0.2s;
     display: flex;
     align-items: center;
   }
@@ -275,7 +275,7 @@
     font-weight: 600;
     padding: 6px 0;
     border-radius: 8px;
-    transition: background 0.2s;
+    transition: 0.2s;
   }
   
   .btn-details:hover {
@@ -375,9 +375,3 @@
     height: 20px;
   }
   
-
-  @media (max-width: 1024px) {
-    .dashboard-grid {
-      grid-template-columns: 1fr;
-    }
-  }
