@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  
+  :root {
+    --bg-page: #edf1e8;        
+    --card-bg: #ffffff;    
+    --primary-green: #688a4e;    
+    --primary-dark: #52703c;    
+    --text-dark: #1f251b;      
+    --text-muted: #626a5d;     
+    --border-color: #7b8376;   
+    --border-focus: #496833;    
+  }
+  
+  body {
+    background-color: var(--bg-page);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .leaf-bg {
+    position: absolute;
+    color: rgba(104, 138, 78, 0.12);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .leaf-bg svg {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .leaf-1 { top: -20px; left: -20px; transform: rotate(-25deg); }
+  .leaf-2 { bottom: -30px; right: -20px; transform: rotate(15deg); }
+  .leaf-3 { bottom: 10%; left: 5%; transform: rotate(45deg); }
+  
+  .login-container {
+    position: relative;
+    z-index: 1;
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 400px;
+    padding: 32px 28px 28px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(45, 60, 35, 0.08),
+                0 2px 6px rgba(0, 0, 0, 0.03);
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(220, 228, 215, 0.8);
+  }
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .logo-img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.06) rotate(3deg);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    height: 52px;
+    padding: 14px 44px 14px 16px;
+    font-size: 16px;
+    color: #1a1a1a;
+    background: transparent;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .input-group input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(104, 138, 78, 0.15);
+  }
+  
+  .input-group label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background-color: var(--card-bg);
+    padding: 0 4px;
+  }
+  
+  .input-group input:focus ~ label,
+  .input-group input:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 12px;
+    color: var(--border-focus);
+    font-weight: 600;
+  }
+  
+  .input-icon, .toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+  }
+  
+  .input-icon {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+  
+  .toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 50%;
+    transition: 0.2s,0.1s;
+  }
+  
+  .toggle-password:hover {
+    background-color: #f0f4ec;
+  }
+  
+  .toggle-password:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+  
+  .toggle-password svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .forgot-password-wrapper {
+    text-align: right;
+    margin-top: -6px;
+    margin-bottom: 16px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    border-color: var(--primary-green);
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    height: 48px;
+    background-color: var(--primary-green);
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(104, 138, 78, 0.3);
+    transition: all 0.25s ease;
+  }
+  
+  .btn-submit .btn-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: all 0.25s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 6px 14px rgba(82, 112, 60, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .btn-submit:hover .btn-icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .btn-submit:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 6px rgba(82, 112, 60, 0.3);
+  }
+
+  .secondary-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .link {
+    color: var(--text-muted);
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+  
+  .link:hover {
+    color: var(--primary-dark);
+  }

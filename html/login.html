@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hortifruti da LiLi - Login</title>
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+
+  <div class="leaf-bg leaf-1"><i data-lucide="sprout"></i></div>
+  <div class="leaf-bg leaf-2"><i data-lucide="apple"></i></div>
+  <div class="leaf-bg leaf-3"><i data-lucide="carrot"></i></div>
+
+  <main class="login-container">
+    
+ 
+    <div class="logo-wrapper">
+      <img src="../assets/imagens/logo.png" class="logo-img">
+    </div>
+
+    <h1 class="title">Login</h1>
+
+    <form method="get" action="inicio.html">
+      
+      <div class="input-group">
+        <input type="email" id="email" required placeholder=" ">
+        <label for="email">E-mail</label>
+        <i data-lucide="user" class="input-icon"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="senha" required minlength="8">
+        <label for="senha">Senha</label>
+      </div>
+
+      <div class="forgot-password-wrapper">
+        <a href="#" class="link forgot-link">Esqueceu sua senha?</a>
+      </div>
+
+      <button type="submit" class="btn-submit">Entrar</button>
+
+      <div class="secondary-links">
+        <a href="cadastro.html" class="link">Criar uma nova conta</a>
+      </div>
+
+    </form>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
