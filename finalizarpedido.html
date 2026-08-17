@@ -8,10 +8,89 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+    <h1>HortiFruti e Mercearia da LILI</h1>
+    <img src="assets/imagens/fundo.jpg" alt="Logo">
+    
+    <div class="checkout-container">
+
+    <section class="checkout-section">
+     
+        <h2>Dados Pessoais e Entrega</h2>
+     <div class="form-row">
+        <label for="nome">Escreva seu nome:</label>
+        <input type="text" id="Nome" placeholder="Digite seu nome completo">
+       </div>
+       
+    <div class="form-row">
+       <div class="form-group col-4">
+        <label for="cep">Cep:</label>
+         <input type="text" id="cep" placeholder="Digite seu Cep">
+        </div>
+       
+       <div class="form-row">
+        <div class="form-group col-8">
+         <label for="rua">Rua:</label>
+         <input type="text" id="rua" placeholder="Digite o nome da Rua">
+        </div>
+      </div>
+      
+      <div class="form-row">
+       <div class="form-group">
+        <label for="numero">Número</label>
+        <input type="text" id="numero" placeholder="Digite o Número">
+       </div>
+      
+       <div class="form-group">
+        <label for="complemento">Complemento (Opcional)</label>
+        <input type="text" id="complemento" placeholder="Digite um Complemento">
+       </div>
+      </div>
+    
+    </div>
 
 
 
+<h3>Formas De Pagamento</h3>
+<div class="payment-methods">
+ <label><input type="radio" name="Forma de pagamento">Dinheiro</label>
+ <label><input type="radio" name="Forma de pagamento">Pix</label>
+ <label><input type="radio" name="Forma de pagamento">Cartão de Débito</label>
+ <label><input type="radio" name="Forma de pagamento">Cartão de Cartão</label>
+</div>
 
+<span class="Pagamento">Parcelamos em até 4x (com juros)</span>
+</section>
+
+<aside class="summary-section">
+ <h2>Resumo do Pedido</h2>
+ <div class="summary-row"><span>Subtotal:</span>RS 0,00</div>
+ <div class="summary-row"><span>Entrega:</span>RS 0,00</div>
+ <div class="summary-row total"><span>total:</span>RS 0,00</div>
+
+ <button class="btn-finalize">Finalizar Compra</button>
+ <button class="btn-continue">Continuar comprando</button>
+</aside>
+
+</div>
+
+<footer class="rodape-site">
+ <div class="rodape-container">
+  
+ <div class="rodape-bloco">
+  <h3>HortiFruti Da LILI</h3>
+  <p>Onde estamos localizados?</p>
+  <p class="endereco">R.Américo Lobo, 1645 - Manoel Honório<br>Juiz de Fora - MG, 36050-255</p>
+  <p><strong>Telefone:</strong> 99199-4945</p>
+  <a href="https://www.instagram.com/hortifrutimerceariadalili?igsh=MXh3NmFzaDR4eG5xeQ=" class="instagram"> Visite nosso instagram e fique por dentro das novidades!</a>
+</div>
+
+<div class="rodape-bloco bloco-localização">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.0320099003493!2d-43.3484057!3d-21.7402847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989cc1e6df8f09%3A0xf9d08b9a80cc90c9!2sHortifruti%20%26%20Mercearia%20da%20LILI!5e0!3m2!1spt-BR!2sbr!4v1786622031809!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"
+</div>
+
+</div>
+
+</footer>
 
     <script>
         lucide.createIcons();
