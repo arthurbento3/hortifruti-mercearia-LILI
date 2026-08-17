@@ -285,16 +285,6 @@
     padding-top: 10px;
   }
   
-  .btn-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #c0682b;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  
   .btn-back:hover {
     text-decoration: underline;
   }
@@ -384,6 +374,3 @@
     margin-top: 6px;
   }
   
-  .btn-checkout:hover {
-    background-color: #a65620;
-  }

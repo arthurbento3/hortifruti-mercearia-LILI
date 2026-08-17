@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrinho de Compras - Hortifruti e Mercearia da LILI</title>
+  <title>Carrinho de Compras</title>
   <link rel="stylesheet" href="../assets/css/carrinho.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 <body>
@@ -37,7 +37,7 @@
             <i data-lucide="shopping-cart"></i>
           </a>
           <div class="user-avatar" title="Hortifruti da Lili">
-            <img src="../assets/imagens/logo.png" alt="Logo Hortifruti da Lili">
+            <img src="../assets/imagens/logo.png" >
           </div>
         </div>
       </header>
@@ -46,29 +46,30 @@
         <h2>Seu Carrinho de Compras (3 itens)</h2>
       </section>
 
-      <form action="/atualizar-carrinho" method="POST" class="cart-section">
         
         <div class="cart-layout">
-          
           <div class="cart-items-list">
-            
-
+          
             <div class="cart-item">
               <div class="cart-item-image">
-                <img src="../assets/imagens/iorgute.jpg" alt="Iogurte Integral">
+                <img src="../assets/imagens/iorgute.jpg" >
               </div>
+
               <div class="cart-item-details">
                 <h3 class="product-title">Iogurte Integral</h3>
                 <p class="product-price">R$ 10,00 <span class="unit">/un</span></p>
               </div>
+
               <div class="cart-item-qty">
                 <label for="qtd_1">Qtd:</label>
                 <input type="number" id="qtd_1" name="qtd_item_1" value="2" min="1" class="qty-input">
               </div>
+
               <div class="cart-item-subtotal">
                 <span>Subtotal:</span>
                 <strong>R$ 20,00</strong>
               </div>
+
               <button type="submit" name="remover" value="1" class="btn-remove" title="Remover item">
                 <i data-lucide="trash-2"></i>
               </button>
@@ -76,52 +77,52 @@
 
             <div class="cart-item">
               <div class="cart-item-image">
-                <img src="../assets/imagens/alface.webp" alt="Alface Orgânica">
+                <img src="../assets/imagens/alface.webp" >
               </div>
+
               <div class="cart-item-details">
                 <h3 class="product-title">Alface Orgânica</h3>
                 <p class="product-price">R$ 2,50 <span class="unit">/un</span></p>
               </div>
+              
               <div class="cart-item-qty">
                 <label for="qtd_2">Qtd:</label>
                 <input type="number" id="qtd_2" name="qtd_item_2" value="1" min="1" class="qty-input">
               </div>
+
               <div class="cart-item-subtotal">
                 <span>Subtotal:</span>
                 <strong>R$ 2,50</strong>
               </div>
+
               <button type="submit" name="remover" value="2" class="btn-remove" title="Remover item">
                 <i data-lucide="trash-2"></i>
               </button>
+
             </div>
 
             <div class="cart-item">
               <div class="cart-item-image">
-                <img src="../assets/imagens/tomate.webp" alt="Tomate Fresco">
+                <img src="../assets/imagens/tomate.webp" >
               </div>
+
               <div class="cart-item-details">
                 <h3 class="product-title">Tomate Fresco</h3>
                 <p class="product-price">R$ 8,90 <span class="unit">/kg</span></p>
               </div>
+
               <div class="cart-item-qty">
                 <label for="qtd_3">Qtd:</label>
                 <input type="number" id="qtd_3" name="qtd_item_3" value="1" min="1" class="qty-input">
               </div>
+              
               <div class="cart-item-subtotal">
                 <span>Subtotal:</span>
                 <strong>R$ 8,90</strong>
               </div>
+
               <button type="submit" name="remover" value="3" class="btn-remove" title="Remover item">
                 <i data-lucide="trash-2"></i>
-              </button>
-            </div>
-
-            <div class="cart-actions-bar">
-              <a href="produtos.html" class="btn-back">
-                <i data-lucide="arrow-left"></i> Continuar Comprando
-              </a>
-              <button type="submit" name="acao" value="atualizar" class="btn-update">
-                <i data-lucide="refresh-cw"></i> Atualizar Carrinho
               </button>
             </div>
 
@@ -147,19 +148,10 @@
               <span>R$ 31,40</span>
             </div>
 
-            <button type="submit" name="acao" value="finalizar" class="btn-checkout">
-              Finalizar Compra
-            </button>
-          </div>
-
-        </div>
-
-      </form>
-
+            <form method="get" action="finalizarpedido.html">
+              <button type="submit" class="btn-checkout">Finalizar Compra</button>
+            </form>
     </main>
-
-  </div>
-
   <script>
       lucide.createIcons();
   </script>
