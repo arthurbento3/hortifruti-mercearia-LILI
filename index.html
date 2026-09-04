@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Tela Inicial</title>
+    <title>Hortifruti e Mercearia da LILI - Início</title>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -16,41 +16,33 @@
           </div>
     
           <nav class="nav-menu">
-       
             <a href="index.html" class="nav-item active">
               <i data-lucide="home"></i>
               <span>Início</span>
             </a>
-          
-            <a href="produtos.html" class="nav-item">
-              <i data-lucide="box"></i>
-              <span>Produtos</span>
-            </a>
-
           </nav>
         </aside>
     
- 
         <main class="main-content">
           
-    
           <header class="header">
             <h1>Hortifruti e Mercearia da LILI</h1>
             <div class="header-actions">
-              <a href="carrinho.html" class="icon-btn" title="Carrinho">
-                <i data-lucide="shopping-cart"></i>
-              </a>
+               <a href="carrinho.html" class="icon-btn cart-icon-wrapper" title="Carrinho">
+      <i data-lucide="shopping-cart"></i>
+      <span class="cart-badge" id="cart-baz\dge">0</span>
+    </a>
               <div class="user-avatar" title="Hortifruti da Lili">
-              
-                <img src="assets/imagens/logo.png">
+                <img src="assets/imagens/logo.png" alt="Logo Lili">
               </div>
             </div>
           </header>
     
           <section class="hero-banner">
-            <img src="assets/imagens/fundo.jpg"class="banner-img">
+            <img src="assets/imagens/fundo.jpg" class="banner-img" alt="Banner de fundo">
           </section>
     
+         
           <div class="dashboard-grid">
             <div class="left-column">
               
@@ -60,34 +52,34 @@
                   
                   <div class="product-card">
                     <div class="card-image">
-                      <img src="assets/imagens/iorgute.jpg" >
+                      <img src="assets/imagens/iorgute.jpg" alt="Iogurte Integral">
                     </div>
                     <div class="card-info">
                       <h3 class="product-title">Iogurte Integral</h3>
                       <p class="product-price">R$ 10,00<span class="unit">/un</span></p>
-                      <a href="#" class="btn-details">Ver Detalhes</a>
+                      <button class="btn-add-cart" data-id="1" data-name="Iogurte Integral" data-price="10.00" data-image="assets/imagens/iorgute.jpg">Adicionar ao Carrinho</button>
                     </div>
                   </div>
     
                   <div class="product-card">
                     <div class="card-image">
-                      <img src="assets/imagens/alface.webp"  >
+                      <img src="assets/imagens/alface.webp" alt="Alface Orgânica">
                     </div>
                     <div class="card-info">
                       <h3 class="product-title">Alface Orgânica</h3>
                       <p class="product-price">R$ 2,50<span class="unit">/un</span></p>
-                      <a href="#" class="btn-details">Ver Detalhes</a>
+                      <button class="btn-add-cart" data-id="2" data-name="Alface Orgânica" data-price="2.50" data-image="assets/imagens/alface.webp">Adicionar ao Carrinho</button>
                     </div>
                   </div>
     
                   <div class="product-card">
                     <div class="card-image">
-                      <img src="assets/imagens/tomate.webp">
+                      <img src="assets/imagens/tomate.webp" alt="Tomate Fresco">
                     </div>
                     <div class="card-info">
                       <h3 class="product-title">Tomate Fresco</h3>
                       <p class="product-price">R$ 8,90<span class="unit">/kg</span></p>
-                      <a href="#" class="btn-details">Ver Detalhes</a>
+                      <button class="btn-add-cart" data-id="3" data-name="Tomate Fresco" data-price="8.90" data-image="assets/imagens/tomate.webp">Adicionar ao Carrinho</button>
                     </div>
                   </div>
 
@@ -101,36 +93,36 @@
                   <div class="product-card promo-card">
                     <span class="badge-promo">Oferta do Dia</span>
                     <div class="card-image">
-                      <img src="assets/imagens/goiaba.webp">
+                      <img src="assets/imagens/goiaba.webp" alt="Goiaba Vermelha">
                     </div>
                     <div class="card-info">
                       <h3 class="product-title">Goiaba Vermelha</h3>
                       <p class="product-price">R$ 6,90<span class="unit">/kg</span></p>
-                      <a href="#" class="btn-details">Ver Detalhes</a>
+                      <button class="btn-add-cart" data-id="4" data-name="Goiaba Vermelha" data-price="6.90" data-image="assets/imagens/goiaba.webp">Adicionar ao Carrinho</button>
                     </div>
                   </div>
           
                   <div class="product-card promo-card">
                     <span class="badge-promo">Oferta do Dia</span>
                     <div class="card-image">
-                      <img src="assets/imagens/banana.webp">
+                      <img src="assets/imagens/banana.webp" alt="Banana Nanica">
                     </div>
                     <div class="card-info">
                       <h3 class="product-title">Banana Nanica</h3>
                       <p class="product-price">R$ 5,90<span class="unit">/kg</span></p>
-                      <a href="#" class="btn-details">Ver Detalhes</a>
+                      <button class="btn-add-cart" data-id="5" data-name="Banana Nanica" data-price="5.90" data-image="assets/imagens/banana.webp">Adicionar ao Carrinho</button>
                     </div>
                   </div>
 
                   <div class="product-card promo-card">
                     <span class="badge-promo">Oferta do Dia</span>
                     <div class="card-image">
-                      <img src="assets/imagens/morango.jpg" >
+                      <img src="assets/imagens/morango.jpg" alt="Morango">
                     </div>
                     <div class="card-info">
-                      <h3 class="product-title">Banana Nanica</h3>
-                      <p class="product-price">R$ 10,00<span class="unit">/bandeija</span></p>
-                      <a href="#" class="btn-details">Ver Detalhes</a>
+                      <h3 class="product-title">Morango Especial</h3>
+                      <p class="product-price">R$ 10,00<span class="unit">/bandeja</span></p>
+                      <button class="btn-add-cart" data-id="6" data-name="Morango Especial" data-price="10.00" data-image="assets/imagens/morango.jpg">Adicionar ao Carrinho</button>
                     </div>
                   </div>
 
@@ -144,7 +136,7 @@
               <section class="info-card history-card">
                 <div class="history-header">
                   <h2>Nossa História</h2>
-                  <img src="assets/imagens/logo.png" class="mini-logo" >
+                  <img src="assets/imagens/logo.png" class="mini-logo" alt="Logo Lili">
                 </div>
                 <p>
                   A história do Hortifruti e Mercearia da LILI começou em 2022, fruto do sonho de transformar a paixão pelo empreendedorismo em realidade. Após fechar o ciclo no mercado de trabalho tradicional (CLT), veio a coragem de abrir um negócio próprio para criar um ambiente acolhedor, familiar e confortável para a nossa comunidade.
@@ -167,16 +159,144 @@
                 </div>
     
                 <div class="contact-footer">
-                  <a href="https://www.instagram.com/hortifrutimerceariadalili?igsh=MXh3NmFzaDR4eG5xeQ=" target="_blank" class="social-icon instagram" title="Instagram">
-                    <img src="assets/imagens/insta.png" alt="" width="25" height="25">
+                  <a href="https://www.instagram.com/hortifrutimerceariadalili?igsh=MXh3NmFzaDR4eG5xeQ==" target="_blank" class="social-icon instagram" title="Instagram">
+                    <img src="assets/imagens/insta.png" alt="Instagram" width="25" height="25">
                   </a>
                 </div>
-
               </section>
-        </main>
-      <script>
-          lucide.createIcons();
-      </script>
 
+            </div>
+          </div> 
+          
+          <section class="filter-section">
+            <div class="filter-categories">
+              <span class="filter-label">PRODUTOS:</span>
+            </div>
+            <button class="search-btn" title="Buscar">
+              <i data-lucide="search"></i>
+            </button>
+          </section>
+
+          <section class="product-grid">
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/alface.webp" alt="Alface Crespa">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Alface Crespa</h3>
+                <p class="product-price">R$ 2,50 <span class="unit">Verdura</span></p>
+                <button class="btn-add-cart" data-id="7" data-name="Alface Crespa" data-price="2.50" data-image="assets/imagens/alface.webp">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/iorgute.jpg" alt="Iogurte Caseiro">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Iogurte Caseiro / 300 ML</h3>
+                <p class="product-price">R$ 10,00</p>
+                <button class="btn-add-cart" data-id="8" data-name="Iogurte Caseiro 300ml" data-price="10.00" data-image="assets/imagens/iorgute.jpg">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/cafe.webp" alt="Café Pilão">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Café Pilão / 500g</h3>
+                <p class="product-price">R$ 20,00<span class="unit">/pct</span></p>
+                <button class="btn-add-cart" data-id="9" data-name="Café Pilão 500g" data-price="20.00" data-image="assets/imagens/cafe.webp">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/coca cola.png" alt="Coca Cola">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Coca Cola / 2L</h3>
+                <p class="product-price">R$ 12,00</p>
+                <button class="btn-add-cart" data-id="10" data-name="Coca Cola 2L" data-price="12.00" data-image="assets/imagens/coca cola.png">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/batata.png" alt="Batata Inglesa">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Batata Inglesa</h3>
+                <p class="product-price">R$ 6,00<span class="unit">/Kg</span></p>
+                <button class="btn-add-cart" data-id="11" data-name="Batata Inglesa" data-price="6.00" data-image="assets/imagens/batata.png">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/abacate.webp" alt="Abacate">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Abacate</h3>
+                <p class="product-price">R$ 8,00<span class="unit">/und</span></p>
+                <button class="btn-add-cart" data-id="12" data-name="Abacate" data-price="8.00" data-image="assets/imagens/abacate.webp">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/morango.jpg" alt="Morango">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Morango</h3>
+                <p class="product-price">R$ 10,00<span class="unit">/bandeja</span></p>
+                <button class="btn-add-cart" data-id="13" data-name="Morango" data-price="10.00" data-image="assets/imagens/morango.jpg">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/limão.jpg" alt="Limão">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Limão</h3>
+                <p class="product-price">R$ 7,99<span class="unit">/Kg</span></p>
+                <button class="btn-add-cart" data-id="14" data-name="Limão" data-price="7.99" data-image="assets/imagens/limão.jpg">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/cebola.webp" alt="Cebola">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Cebola</h3>
+                <p class="product-price">R$ 6,90<span class="unit">/Kg</span></p>
+                <button class="btn-add-cart" data-id="15" data-name="Cebola" data-price="6.90" data-image="assets/imagens/cebola.webp">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="card-image">
+                <img src="assets/imagens/alho.webp" alt="Alho">
+              </div>
+              <div class="card-info">
+                <h3 class="product-title">Alho</h3>
+                <p class="product-price">R$ 15,90<span class="unit">/Kg</span></p>
+                <button class="btn-add-cart" data-id="16" data-name="Alho" data-price="15.90" data-image="assets/imagens/alho.webp">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+
+          </section>
+
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
