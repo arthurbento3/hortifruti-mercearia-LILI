@@ -84,6 +84,7 @@ async function verificarDistanciaEntrega() {
   if (!cep || !rua || !numero) {
     enderecoDentroDoRaio = false;
     avisoDiv.className = "aviso-distancia";
+    avisoDiv.textContent = "";
     atualizarBotaoFinalizar();
     return;
   }
