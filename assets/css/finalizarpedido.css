@@ -73,6 +73,11 @@ body > img {
     flex: 1;
 }
 
+.form-group.cep-group {
+    flex: 0 0 220px;
+    max-width: 220px;
+}
+
 label {
     display: block;
     margin-bottom: 6px;
@@ -80,7 +85,8 @@ label {
     color: #444;
 }
 
-input[type="text"] {
+input[type="text"],
+select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -88,14 +94,46 @@ input[type="text"] {
     font-size: 15px;
     outline: none;
     transition: 0.3s;
+    font-family: inherit;
 }
 
-input[type="text"]:focus {
+.form-group.cep-group input {
+    font-size: 16px;
+    padding: 14px 12px;
+}
+
+input[type="text"]:focus,
+select:focus {
     border-color: #4caf50;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
 }
 
-
+.aviso-distancia {
+    display: none;
+    margin: 4px 0 18px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.aviso-distancia.checando {
+    display: block;
+    background-color: #fff8e1;
+    color: #8d6e00;
+    border: 1px solid #ffe082;
+}
+.aviso-distancia.erro {
+    display: block;
+    background-color: #fdecea;
+    color: #b71c1c;
+    border: 1px solid #f5c6cb;
+}
+.aviso-distancia.sucesso {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
 
 .payment-methods {
     display: flex;
@@ -103,7 +141,7 @@ input[type="text"]:focus {
     gap: 10px;
 }
 
-.payment-methods label {
+.payment-methods > label {
     background-color: #f1f8e9;
     padding: 12px;
     border-radius: 8px;
@@ -111,20 +149,39 @@ input[type="text"]:focus {
     transition: 0.3s;
 }
 
-.payment-methods label:hover {
+.payment-methods > label:hover {
     background-color: #dcedc8;
 }
 
-.payment-methods input {
+.payment-methods input[type="radio"] {
     accent-color: #2e7d32;
     margin-right: 8px;
 }
 
-.Pagamento {
-    display: block;
-    margin-top: 15px;
-    color: #777;
+.detalhe-pagamento {
+    display: none;
+    background-color: #f1f8e9;
+    border: 1px solid #dcedc8;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: -4px;
     font-size: 14px;
+}
+
+.detalhe-pagamento label {
+    margin-top: 8px;
+}
+
+.detalhe-pagamento select,
+.detalhe-pagamento input[type="text"] {
+    margin-top: 4px;
+}
+
+.aviso-pix,
+.aviso-credito {
+    color: #b71c1c;
+    font-weight: 600;
+    margin-top: 8px;
 }
 
 
@@ -168,16 +225,21 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    border: none;
 }
 
 .btn-finalize {
     background-color: #43a047;
     color: white;
-    border: none;
 }
 
 .btn-finalize:hover {
     background-color: #2e7d32;
+}
+
+.btn-finalize:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
 }
 
 .btn-continue {
@@ -260,5 +322,9 @@ button {
 
     .form-row {
         flex-direction: column;
+    }
+
+    .form-group.cep-group {
+        max-width: 100%;
     }
 }

@@ -1,48 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let cart = JSON.parse(localStorage.getItem('lili_cart')) || [];
-    function updateCartCount() {
-        const cartCountElement = document.getElementById('cart-count');
-        if (cartCountElement) {
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCountElement.textContent = totalItems;
+    const buttons = document.querySelectorAll('.btn-add-cart');
+    const cartBadge = document.getElementById('cart-badge');
+
+    function getCart() {
+        return JSON.parse(localStorage.getItem('cart')) || [];
+    }
+
+    function saveCart(cart) {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateBadge();
+    }
+
+    function updateBadge() {
+        const cart = getCart();
+        const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+        if (cartBadge) {
+            cartBadge.textContent = totalCount;
         }
     }
-    function saveCart() {
-        localStorage.setItem('lili_cart', JSON.stringify(cart));
-        updateCartCount();
-    }
-    const addButtons = document.querySelectorAll('.btn-add-cart');
-    addButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const btn = e.target;
-            const id = btn.getAttribute('data-id');
-            const name = btn.getAttribute('data-name');
-            const price = parseFloat(btn.getAttribute('data-price'));
-            const image = btn.getAttribute('data-image');
-            const existingItem = cart.find(item => item.id === id);
 
-            if (existingItem) {
-                existingItem.quantity += 1;
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const id = button.getAttribute('data-id');
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+            const image = button.getAttribute('data-image');
+
+            let cart = getCart();
+            const existingIndex = cart.findIndex(item => item.id === id);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += 1;
             } else {
-                cart.push({
-                    id: id,
-                    name: name,
-                    price: price,
-                    image: image,
-                    quantity: 1
-                });
+                cart.push({ id, name, price, image, quantity: 1 });
             }
-            saveCart();
-            const originalText = btn.textContent;
-            btn.textContent = "Adicionado! ✓";
-            btn.style.backgroundColor = "#74a055";
 
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.backgroundColor = "";
-            }, 1200);
+            saveCart(cart);
+            alert(`${name} foi adicionado ao carrinho!`);
         });
     });
 
-    updateCartCount();
+    updateBadge();
 });
